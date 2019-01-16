@@ -1,0 +1,26 @@
+.container {
+    height: 100%;
+    // background: url(../../../assets/background.jpg) no-repeat center fixed;/
+    -webkit-background-size: cover;
+    /* pour anciens Chrome et Safari */
+    background-size: cover;
+    padding: 5%;
+    /* version standardisée */
+}
+
+table {
+    width: 90%;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.flex-vert-center {
+    display: flex;
+    align-items: center;
+}

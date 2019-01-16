@@ -1,7 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-  margin: 0;
-  padding: 0;
 
-  height: 100%;
+// utilise des theme prefefinie par angular material
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css"
+
+//add a new theming
+@import '~@angular/material/theming';
+@include mat-core();
+
+$winter-primary: mat-palette($mat-blue);
+$winter-accent:  mat-palette($mat-blue, A200, A100, A400);
+$winter-warn:    mat-palette($mat-red);
+$winter-theme: mat-light-theme($winter-primary, $winter-accent, $winter-warn);
+@include angular-material-theme($winter-theme);
+
+
+$summer-primary: mat-palette($mat-brown);
+$summer-accent:  mat-palette($mat-brown, 200, A100, A400);
+$summer-warn:    mat-palette($mat-red);
+$summer-theme: mat-light-theme($summer-primary, $summer-accent,$summer-warn);
+.summer-theme {
+@include angular-material-theme($summer-theme);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: #ffffff !important;
 }

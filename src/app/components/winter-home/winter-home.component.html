@@ -1,0 +1,54 @@
+<mat-sidenav-container class="example-container" >
+  
+  <mat-sidenav class="sidenav" #sidenav mode="side" >  
+        <div class="header-sidenav">
+            
+        </div>
+      <mat-list>
+         <mat-nav-list>
+            <mat-list-item>
+              <a matLine href="..."><mat-icon>info</mat-icon> Mes Station</a>
+            </mat-list-item>
+            <mat-list-item> Aux Alentours </mat-list-item>
+            <mat-list-item> Localiser </mat-list-item>
+            <mat-list-item>
+              <a matLine href=""><mat-icon>arrow_back_ios</mat-icon> Selection Saison</a>
+            </mat-list-item>
+          </mat-nav-list>
+      </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+      <mat-toolbar color="primary">
+          <mat-toolbar-row>
+              <button mat-icon-button (click)="SidenavOpen()"><mat-icon>{{iconmenu}}</mat-icon></button>
+              <span>Winters Sports</span>
+              <span class="example-spacer"></span>
+              <mat-icon class="example-icon">search</mat-icon>
+        
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item>
+                    <mat-icon>refresh</mat-icon>
+                    <span>Refresh</span>
+                  </button>
+                  <button mat-menu-item>
+                    <mat-icon>help</mat-icon>
+                    <span>Help</span>
+                  </button>
+                  <button mat-menu-item>
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Quit</span>
+                  </button>
+                </mat-menu>
+        
+          </mat-toolbar-row>
+        </mat-toolbar>
+
+    <app-card-station></app-card-station>
+  
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
