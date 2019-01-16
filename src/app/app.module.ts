@@ -5,7 +5,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { NgZorroAntdModule} from 'ng-zorro-antd';
+
 
 // NG Translate
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -75,7 +75,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatGridListModule,
     MatSidenavModule,
     MatTabsModule,
-    NgZorroAntdModule,
     MatProgressSpinnerModule,
     TranslateModule.forRoot({
       loader: {
