@@ -1,5 +1,5 @@
 
-<!-- <div class="summer-theme">
+<div class="summer-theme">
 <mat-toolbar color ="primary">
   <mat-toolbar-row>
       <a mat-flat-button routerLink="">
@@ -33,73 +33,4 @@
 <div class="container">
   <app-tabs-location></app-tabs-location>
   <app-footer></app-footer>
-</div> -->
-
-<nz-layout>
-    <nz-header style="background-color: steelblue; padding:0;">
-      <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i>
-      <span style="color:white">Summers Sports</span>
-      <i class="menuright" nz-icon [type]="ellipsis" (click)="isCollapsed=!isCollapsed" theme="outline"></i>
-    </nz-header>
-  
-  
-      <nz-layout style="background: #fff">
-        <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
-          <div class="logo">
-          </div>
-          <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-            <!-- <li nz-submenu>
-              <span title><i nz-icon type="user"></i><span class="nav-text">User</span></span>
-              <ul>
-                <li nz-menu-item>Tom</li>
-                <li nz-menu-item>Bill</li>
-                <li nz-menu-item>Alex</li>
-              </ul>
-            </li>
-            <li nz-submenu>
-              <span title><i nz-icon type="team"></i><span class="nav-text">Team</span></span>
-              <ul>
-                <li nz-menu-item>Team 1</li>
-                <li nz-menu-item>Team 2</li>
-              </ul>
-            </li> -->
-            <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">Mes Favories</span></span><a routerLink="/SummerHome" routerLinkActive="active"></a></li>
-            <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">Mes Stations</span></span></li>
-            <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">Aux Alentours</span></span></li>
-          </ul>
-        </nz-sider>
-          <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerRight">
-            <div class="right">
-            </div>
-            <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-              <!-- <li nz-submenu>
-                <span title><i nz-icon type="user"></i><span class="nav-text">User</span></span>
-                <ul>
-                  <li nz-menu-item>Tom</li>
-                  <li nz-menu-item>Bill</li>
-                  <li nz-menu-item>Alex</li>
-                </ul>
-              </li>
-              <li nz-submenu>
-                <span title><i nz-icon type="team"></i><span class="nav-text">Team</span></span>
-                <ul>
-                  <li nz-menu-item>Team 1</li>
-                  <li nz-menu-item>Team 2</li>
-                </ul>
-              </li> -->
-              <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">Mes Favories</span></span><a routerLink="/SummerHome" routerLinkActive="active"></a></li>
-              <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">Mes Stations</span></span></li>
-              <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">Aux Alentours</span></span></li>
-            </ul>
-          </nz-sider>
-        <nz-content style="margin:16px 16px;">
-          <div style="padding:24px; background: #fff; min-height: 760px;">
-              <app-tabs-location></app-tabs-location>
-          </div>
-        </nz-content>
-      </nz-layout>
-      <nz-footer style="text-align: center;background-color: steelblue;color: white">Moutain Sports ©2019 Implement By Angular</nz-footer>
-  </nz-layout>
-  <ng-template #trigger>
-    <i nz-icon type="up"></i>
-  </ng-template> 
+</div>

@@ -1,4 +1,4 @@
-import { Component, TemplateRef,ViewChild } from '@angular/core';
+import { Component, ViewChild,OnInit } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
@@ -6,32 +6,27 @@ import {MatSidenav} from '@angular/material/sidenav';
   templateUrl: './winter-home.component.html',
   styleUrls: ['./winter-home.component.scss']
 })
-export class WinterHomeComponent {
-  isCollapsed = false;
-  triggerTemplate = null;
-  @ViewChild('trigger') customTrigger: TemplateRef<void>;
+export class WinterHomeComponent implements OnInit {
+  @ViewChild('sidenav') sidenav: MatSidenav;
+  iconmenu: string = 'menu';
 
-  /** custom trigger can be TemplateRef **/
-  changeTrigger(): void {
-    this.triggerTemplate = this.customTrigger;
+  constructor() { }
+
+  SidenavOpen(){
+    if(this.sidenav.opened == true) 
+    {
+      this.sidenav.close();
+      this.iconmenu = 'menu';
+    } 
+    else{
+      this.sidenav.open()
+      this.iconmenu = 'arrow_back_ios';
+    }  
   }
 
-  // @ViewChild('sidenav') sidenav: MatSidenav;
-  // iconmenu: string = 'menu';
-  
-  // constructor() { }
+  ngOnInit() {
+  }
 
-  // SidenavOpen(){
-  //   if(this.sidenav.opened == true) 
-  //   {
-  //     this.sidenav.close();
-  //     this.iconmenu = 'menu';
-  //   } 
-  //   else{
-  //     this.sidenav.open()
-  //     this.iconmenu = 'arrow_back_ios';
-  //   }  
-  // }
   
 }
 

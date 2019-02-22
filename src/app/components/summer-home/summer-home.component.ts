@@ -1,22 +1,15 @@
-import { Component,TemplateRef,ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-summer-home',
   templateUrl: './summer-home.component.html',
   styleUrls: ['./summer-home.component.scss']
 })
-export class SummerHomeComponent {
-isCollapsed = false;
-triggerTemplate = null;
-triggerRight= null;
-@ViewChild('trigger') customTrigger: TemplateRef<void>;
+export class SummerHomeComponent implements OnInit {
 
-/** custom trigger can be TemplateRef **/
-changeTrigger(): void {
-  this.triggerTemplate = this.customTrigger;
-}
+  constructor() { }
 
-changRight(): void {
-  this.triggerRight = this.customTrigger;
-}
+  ngOnInit() {
+  }
+
 }
