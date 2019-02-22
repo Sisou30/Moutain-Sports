@@ -1,46 +1,71 @@
-  .container {
-    height: 100%;
-    // background: url(../../../assets/background.jpg) no-repeat center fixed;/
-    -webkit-background-size: cover;
-    /* pour anciens Chrome et Safari */
-    background-size: cover;
-    padding: 5%;
-    /* version standardisée */
-}
+//   .container {
+//     height: 100%;
+//     // background: url(../../../assets/background.jpg) no-repeat center fixed;/
+//     -webkit-background-size: cover;
+//     /* pour anciens Chrome et Safari */
+//     background-size: cover;
+//     padding: 5%;
+//     /* version standardisée */
+// }
 
-.header-sidenav{
-    width:300px;
-    height:200px;
-    background: url("../../../assets/header-sidena.jpg");
-    background-size: cover;
-}
+// .header-sidenav{
+//     width:300px;
+//     height:200px;
+//     background: url("../../../assets/header-sidena.jpg");
+//     background-size: cover;
+// }
 
-table {
-    width: 90%;
-}
+// table {
+//     width: 90%;
+// }
 
-.example-icon {
-    padding: 0 14px;
-}
+// .example-icon {
+//     padding: 0 14px;
+// }
 
-.example-spacer {
-    flex: 1 1 auto;
-}
+// .example-spacer {
+//     flex: 1 1 auto;
+// }
 
-.flex-vert-center {
-    display: flex;
-    align-items: center;
-}
+// .flex-vert-center {
+//     display: flex;
+//     align-items: center;
+// }
 
-.example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+// .example-container {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//   }
   
-  .sidenav{
-      background-color:#3498DB;
+//   .sidenav{
+//       background-color:#3498DB;
+//   }
+.nz-header{
+  background-color:  steelblue;
+  padding:0;
+}
+
+ .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
   }
-  
+
+  .trigger:hover {
+    color: #1890ff;
+  }
+
+   .logo {
+    height: 100px;
+    background-image:  url("../../../assets/ic_launcher.png");
+    margin: 6px;
+  }
+
+  .anticon{
+    color: white;
+  }

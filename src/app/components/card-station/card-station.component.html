@@ -33,7 +33,7 @@
 </div> -->
 
 
-
+<!-- 
 <div layout="column" ng-app="Pcard" ng-controller="AppCtrl">
   <md-card class="sample-Pcard">        
         <md-card-content>
@@ -193,4 +193,22 @@
         </md-card-content>
   </md-card>
   
-</div>
+</div> -->
+
+
+<nz-card style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting,actionEdit,actionEllipsis]">
+  <nz-card-meta nzTitle="Les Saisies" nzDescription="Les Saisies est une station française de sports d hiver située sur le col des Saisies et sur les communes d Hauteluce, Villard-sur-Doron, Crest-Voland et Cohennoz dans le département de la Savoie, en région Auvergne-Rhône-Alpes"></nz-card-meta>
+</nz-card>
+
+<ng-template #coverTemplate>
+  <img alt="example" src="https://www.lessaisies.com/templates/OT2016/images/logo_les_saisies.png"/>
+</ng-template>
+<ng-template #actionSetting>
+  <i nz-icon type="setting"></i>
+</ng-template>
+<ng-template #actionEdit>
+  <i nz-icon type="edit"></i>
+</ng-template>
+<ng-template #actionEllipsis>
+  <i nz-icon type="ellipsis"></i>
+</ng-template>

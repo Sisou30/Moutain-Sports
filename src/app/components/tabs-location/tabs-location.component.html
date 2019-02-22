@@ -1,8 +1,17 @@
-<mat-tab-group [backgroundColor]="red">
+<!-- <mat-tab-group [backgroundColor]="red">
   <mat-tab label="Stations">
     <app-card-station></app-card-station>
   </mat-tab>
   <mat-tab label="Aux Alentours">
     
   </mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->
+
+<nz-tabset>
+  <nz-tab nzTitle="Stations">
+    <app-card-station></app-card-station>
+  </nz-tab>
+  <nz-tab nzTitle="Aux Alentours">
+    Content of Tab Pane 2
+  </nz-tab>
+</nz-tabset>
