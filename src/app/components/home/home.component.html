@@ -1,5 +1,100 @@
-<div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+<mat-toolbar class="app-toolbar" color="primary">
+    <button mat-icon-button (click)="sindeNavAction()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  <span class="fill-remaining-space">Moutain Sports</span>
+
+  <!-- <span class="toolbar-flex"></span>
+  <span>About</span>
+  <span>About</span> -->
+
+  <span class="toolbar-flex"></span>
+  <button mat-flat-button color="primary" (click)="onLoadingClick()">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button> -->
+    <!-- <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voicemail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu> -->
+</mat-toolbar>
+
+
+
+<!-- <header class="docs-header-background">
+    <div class="docs-header-section">
+      <div  class="docs-header-headline">
+        <h1 class="mat-h1">Angular Material</h1>
+        <h2 > Material Design components for Angular</h2>
+      </div>
+  </div>
+</header> -->
+
+<div class="body">
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav id="sidenav" mode="side"
+                     [class.menu-open]="isMenuOpen"
+                     [class.menu-closed]="!isMenuOpen"
+                     opened
+                     class="sidenav"
+                     [fixedInViewport]="true" [fixedTopGap]="64"
+                     [fixedBottomGap]="64">
+                     <mat-nav-list role="list">
+                        <mat-list-item role="listitem" routerLink="/Parcours" routerLinkActive="active">
+                            <mat-icon mat-list-icon>layers</mat-icon>
+                            <div fxFlex="10"></div>
+                            <div *ngIf="isMenuOpen" class="sidenav-item">
+                              <h5>Mes parcours</h5>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item role="listitem" routerLink="/LoadParcour" routerLinkActive="active">
+                            <mat-icon mat-list-icon>pin_drop</mat-icon>
+                            <div fxFlex="10"></div>
+                            <div *ngIf="isMenuOpen" class="sidenav-item">
+                              <h5>Charger un parcours</h5>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item role="listitem" routerLink="/CreateParcours" routerLinkActive="active">
+                            <mat-icon mat-list-icon>add_location</mat-icon>
+                            <div fxFlex="10"></div>
+                            <div *ngIf="isMenuOpen" class="sidenav-item">
+                              <h5>Créer un parcours</h5>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item role="listitem" routerLink="/SearchParcour" routerLinkActive="active">
+                            <mat-icon mat-list-icon>not_listed_location</mat-icon>
+                            <div fxFlex="10"></div>
+                            <div *ngIf="isMenuOpen" class="sidenav-item">
+                              <h5>Trouver un parcours</h5>
+                            </div>
+                        </mat-list-item>
+                    </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content class="sidenav-content" [ngStyle]="{'margin-left.px': contentMargin}">
+              <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>
+
+  <mat-toolbar class="toolbar-footer" color='primary'>
+    <span class='spacer'></span>
+      <h3>© Copyright Angular Apps 2017.</h3>
+    <span class='spacer'></span>
+  </mat-toolbar>
+
+
+

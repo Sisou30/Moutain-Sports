@@ -1,0 +1,29 @@
+<mat-card *ngFor="let parcour of parcours.parcours" class="mat-card-horizontal" >
+  <div fxLayout="row" fxLayoutGap="20px">
+    <div class="mat-card-image" [fxFlex]=15  [style.background-image]="'url('+parcour.image+')'">
+    </div>
+    <div class="mat-card-container" [fxFlex]=85>
+      <mat-card-title>{{parcour.title}} :</mat-card-title>
+      <mat-card-content>
+        <p>
+        {{parcour.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <hr>
+        <fa  name="clock"></fa> {{parcour.time}}H
+        <fa  name="arrows-h"></fa> {{parcour.distance}}Km
+        <fa  name="long-arrow-up"></fa> {{parcour.distance}}m
+        <fa  name="long-arrow-down"></fa> {{parcour.distance}}m
+      </mat-card-actions>
+    </div>
+
+    <div class="mat-card-container-right" [fxFlex]=2>
+      <button *ngIf="parcour.favorite" mat-fab color=accent (click)="ButtonFavorite_Click($event, parcour)">
+        <mat-icon color=primary aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+      </button>
+      <button *ngIf="!parcour.favorite" mat-fab color=primary (click)="ButtonFavorite_Click($event, parcour)">
+        <mat-icon color=accent aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+      </button>
+    </div>
+  </div>

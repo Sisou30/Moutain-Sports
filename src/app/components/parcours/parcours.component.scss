@@ -1,0 +1,42 @@
+.mat-card-horizontal{
+  max-width: 100%;
+  margin: 2% 2% 2% 2%;
+  padding: 0px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.mat-card-image{
+  height: 150px;
+  margin : 0px !important;
+  padding: 0px !important;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ie4V8KVyiTkwF1C8KR2s_Gr6eWCj3Ls0S09OMWYWX4GkTZMK6A");
+  background-position: center;
+}
+
+.mat-card-container{
+  padding: 15px;
+  margin: 0px !important;
+  position: relative;
+}
+
+.mat-card-container-right{
+    padding: 10px;
+    flex: none !important;
+    box-sizing: border-box;
+    max-width: none !important;
+}
+
+.mat-card-container .mat-card-actions {
+    margin: 0% !important;
+    padding: 8px 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.mat-card-container .mat-card-actions .mat-card-actions-icons .fa, .far, .fas {
+
+    font-family: "Font Awesome 5 Free" !important;
+
+}
