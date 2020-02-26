@@ -1,0 +1,28 @@
+<div id="fab-dismiss"
+     *ngIf="fabTogglerState==='active'"
+     (click)="onToggleFab()">
+</div>
+
+<div id="map" class="map">
+
+  <!-- Popup -->
+  <div id="popup" title="Welcome to OpenLayers"></div>
+</div>
+
+<div class="fab-container">
+  <button mat-fab class="fab-toggler"
+          (click)="onToggleFab()">
+    <i class="material-icons" [@fabToggler]="{value: fabTogglerState}">add</i> <!-- Animation here -->
+  </button>
+  <div [@speedDialStagger]="buttons.length"> <!-- and here -->
+    <button *ngFor="let btn of buttons"
+            mat-mini-fab
+            class="fab-secondary"
+            (click)="onSelect(btn)"
+            color="secondary">
+      <i class="material-icons">{{btn.icon}}</i>
+    </button>
+  </div>
+</div>
+
+
