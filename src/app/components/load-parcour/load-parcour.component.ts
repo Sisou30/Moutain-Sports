@@ -82,6 +82,7 @@ export class LoadParcourComponent implements AfterViewInit, OnInit {
     this.setpoint(ListPoint);
     this.popup();
 
+
   }
 
   popup(){
