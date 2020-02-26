@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Importer un fichier GPX </h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div mat-dialog-content class="matdialog">
+  <div fxLayout="row" fxLayoutGap="20px">
+
+    <mat-form-field class="example-form-field">
+      <input matInput type="text" formControlName="avatar" placeholder="Saisir le chemin du fichier .GPX" readonly>
+      <button mat-button *ngIf="value" type="button" matSuffix mat-icon-button aria-label="Clear" (click)="ngOnInit()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+        <input hidden  type="file" #file (change)="onFileChange($event)" >
+        <button mat-flat-button type="button" color="primary" (click)="file.click()">
+          <mat-icon aria-label="Open icon">folder</mat-icon>
+        </button>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <button mat-flat-button color="primary" type="button" (click)="onNoClick()">Annuler</button>
+    <button mat-flat-button color="primary" type="submit" cdkFocusInitial>Valider</button>
+  </div>
+</div>
+</form>
+
+
