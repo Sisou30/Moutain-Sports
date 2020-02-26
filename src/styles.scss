@@ -2,6 +2,58 @@
 html, body {
   margin: 0;
   padding: 0;
-
   height: 100%;
+}
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$mat-Gray: (
+    50 : #e7e7e7,
+    100 : #c3c3c4,
+    200 : #9b9b9d,
+    300 : #737375,
+    400 : #555558,
+    500 : #37373a,
+    600 : #313134,
+    700 : #2a2a2c,
+    800 : #232325,
+    900 : #161618,
+    A100 : #FFD180,
+    A200 : #FFAB40,
+    A400 : #FF9100,
+    A700 : #FF6D00,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$winter-primary: mat-palette($mat-Gray);
+$winter-accent:  mat-palette($mat-Gray, A400, A100, A200);
+$winter-warn:    mat-palette($mat-red);
+$winter-theme: mat-light-theme($winter-primary, $winter-accent, $winter-warn);
+@include angular-material-theme($winter-theme);
+
+
+$summer-primary: mat-palette($mat-brown);
+$summer-accent:  mat-palette($mat-brown, 200, A100, A400);
+$summer-warn:    mat-palette($mat-red);
+$summer-theme: mat-light-theme($summer-primary, $summer-accent,$summer-warn);
+.summer-theme {
+@include angular-material-theme($summer-theme);
 }
